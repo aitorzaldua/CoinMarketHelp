@@ -1,0 +1,19 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+
+.navbar__left {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.navbar__left img {
+    height: 6%;
+    width: auto;
+}
+
+.navbar__left h2 {
+    position: relative;
+}

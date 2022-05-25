@@ -1,0 +1,15 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+
+.navbar__left {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+.navbar__left img {
+    height: 6%;
+    width: auto;
+}
