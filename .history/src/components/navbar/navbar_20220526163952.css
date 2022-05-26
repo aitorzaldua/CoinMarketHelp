@@ -1,9 +1,7 @@
 .navbar {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    flex-direction: row;
+    color: white;
     padding-top: 1rem;
-    padding-bottom: 1rem;
     justify-content: space-between;
 }
-

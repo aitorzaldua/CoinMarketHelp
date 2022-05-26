@@ -7,10 +7,9 @@ const Home = () => {
   return (
     <>
       <div
-        className="backgroundHome"
+        className="container backgroundHome"
         style={{ backgroundImage: `url(${bgHome})` }}
       ></div>
-      
       <Navbar />
     </>
   );

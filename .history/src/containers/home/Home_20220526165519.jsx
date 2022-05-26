@@ -10,7 +10,6 @@ const Home = () => {
         className="backgroundHome"
         style={{ backgroundImage: `url(${bgHome})` }}
       ></div>
-      
       <Navbar />
     </>
   );
