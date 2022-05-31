@@ -6,7 +6,10 @@ import bgHome from "../../assets/burbuja.png";
 const Home = () => {
   return (
     <>
-      <div className="container Home">
+      <div
+        className="container Home"
+        style={{ backgroundImage: `url(${bgHome})` }}
+      >
         <Navbar />
       </div>
     </>

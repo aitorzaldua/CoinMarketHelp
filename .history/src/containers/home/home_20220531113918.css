@@ -1,0 +1,12 @@
+.backgroundHome {
+        position: relative;
+        top: 0;
+        height: 100vh;
+        width: 100vw;
+        background-size: cover;
+        z-index: -999;
+}
+
+.backgroundHome img {
+        margin-top: 20rem;
+}
