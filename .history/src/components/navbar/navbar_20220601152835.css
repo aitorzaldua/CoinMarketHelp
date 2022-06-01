@@ -17,7 +17,6 @@
     flex-direction: row;
     gap: 4rem;
     padding: 0 0 2rem 18rem;
-    font-family: var(--font-family);
 }
 
 .navbar__links a{

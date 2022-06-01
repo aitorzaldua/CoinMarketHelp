@@ -1,0 +1,18 @@
+.home {
+        position: relative;
+        top: 0;
+        height: 100vh;
+        width: 100vw;
+        background-size: cover;
+        /* e1f5f4, c2dfff, d4ffc2 */
+        background-color: hsla(177, 50%, 92%, 1);
+        background-image:
+                radial-gradient(at 40% 20%, hsla(177, 51%, 91%, 1) 0px, transparent 50%),
+                radial-gradient(at 80% 0%, hsla(211, 100%, 88%, 1) 0px, transparent 50%),
+                radial-gradient(at 0% 50%, hsla(102, 100%, 88%, 1) 0px, transparent 50%);
+}
+
+.home__content {
+        display: flex;
+        flex-direction: row;
+}

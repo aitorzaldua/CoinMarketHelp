@@ -1,7 +1,6 @@
 import React from "react";
 import "./home.css";
 import { Navbar } from "../../components";
-import Logo from "../../assets/logo_name.png";
 
 const Home = () => {
   return (
@@ -21,9 +20,7 @@ const Home = () => {
               In addition, know the current state of the market in real time.
             </p>
           </div>
-          <div className="home__content-left">
-              <img src={Logo} alt="" />
-          </div>
+          <div className="home__content-left">texto</div>
         </div>
       </div>
     </>

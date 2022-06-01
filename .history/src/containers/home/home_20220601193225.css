@@ -23,8 +23,7 @@
         justify-content: center;
         align-items: flex-start;
         flex-direction: column;
-        margin-right: 13rem;
-        margin-left: 3rem;;
+        margin-right: 5rem;
 }
 
 .home__content-rigth h1 {
@@ -33,11 +32,6 @@
         font-size: 62px;
         line-height: 75px;
         letter-spacing: -0.04em;
-
-        background: var(--gradient-text);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
 }
 
 .home__content-rigth p {
@@ -46,5 +40,6 @@
         font-size: 20px;
         line-height: 28px;
         color: var(--color-04);
+
         margin-top: 1.5rem;
 }
