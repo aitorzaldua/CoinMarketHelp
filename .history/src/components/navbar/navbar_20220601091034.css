@@ -1,0 +1,15 @@
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    justify-content: space-between;
+    color: white;
+}
+
+.brand__navbar img {
+    width: 60px;
+    height: 60px;
+}
+
