@@ -6,7 +6,6 @@
     --color-01: #e1f5f4;
     --color-02: #c2dfff;
     --color-03: #d4ffc2;
-    --color-04: #2c8cb5;
 
     --transition: all 400ms ease;
 
@@ -15,4 +14,3 @@
     --container-width-md: 86%;
     --container-width-sm: 90%;
 }
-
