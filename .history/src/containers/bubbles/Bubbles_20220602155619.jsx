@@ -3,7 +3,11 @@ import "./bubbles.css";
 import Coin from "../../components/coin/Coin";
 
 const Bubbles = () => {
+
   const [btc, setBtc] = useState(50);
+  const token = "BTC";
+
+  console.log ("buble: ", token);
 
   return (
     <>
@@ -11,12 +15,9 @@ const Bubbles = () => {
         <div className="bubbles__intructions">
           Where do you think these tokens are going? Up or Down?
         </div>
-        <div className="list">
-        <Coin perc={btc} setPerc={setBtc} token={"BTC"} />
-        <Coin perc={"25"} setPerc={setBtc} token={"ETH"} />
-        <Coin perc={"82"} setPerc={setBtc} token={"SOL"} />
-        </div>
+        
       </div>
+      <Coin perc={btc} setPerc={setBtc} token={token} />
     </>
   );
 };

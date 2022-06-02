@@ -1,0 +1,12 @@
+.token {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+
+    font-size: 30px;
+    font-weight: bold;
+
+    color: var(--color-01);
+    
+
+}

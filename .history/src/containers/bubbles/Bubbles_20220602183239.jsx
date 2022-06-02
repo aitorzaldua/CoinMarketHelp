@@ -13,8 +13,8 @@ const Bubbles = () => {
         </div>
         <div className="list">
         <Coin perc={btc} setPerc={setBtc} token={"BTC"} />
-        <Coin perc={"25"} setPerc={setBtc} token={"ETH"} />
-        <Coin perc={"82"} setPerc={setBtc} token={"SOL"} />
+        <Coin perc={btc} setPerc={setBtc} token={"BTC"} />
+        <Coin perc={btc} setPerc={setBtc} token={"BTC"} />
         </div>
       </div>
     </>

@@ -14,7 +14,7 @@ const Navbar = () => {
           {/* <h3><a href="#Home">Home</a></h3> */}
           <h3><a href="#Bubbles">Bubbles</a></h3>
           <h3><a href="#Markets">Markets</a></h3>
-          <h3><a href="#Draft">About me</a></h3>
+          <h3><a href="#Draft">Meet me</a></h3>
         </div>
         <div className="navbar__login">
           <ConnectButton />
