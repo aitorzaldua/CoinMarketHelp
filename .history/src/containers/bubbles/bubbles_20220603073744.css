@@ -4,11 +4,8 @@
         width: 100vw;
         background-size: cover;
 
-        background-color: hsla(231, 81%, 6%, 1);
-        background-image:
-                radial-gradient(at 40% 20%, hsla(234, 96%, 24%, 1) 0px, transparent 50%),
-                radial-gradient(at 80% 0%, hsla(259, 97%, 56%, 1) 0px, transparent 50%),
-                radial-gradient(at 0% 50%, hsla(280, 100%, 71%, 1) 0px, transparent 50%);
+        background-color: #b3e6e3;
+        /* #03071e, #790206, #fc7522, #ffd770 */
 }
 
 .bubbles__intructions {
@@ -28,8 +25,8 @@
 
 }
 
-.list {
-        width: 90%;
+.list{
+        width:90%;
         margin: auto;
         max-width: 1200px;
         display: flex;
@@ -37,5 +34,4 @@
         flex-wrap: wrap;
         gap: 150px;
         row-gap: 50px;
-}
-
+      }

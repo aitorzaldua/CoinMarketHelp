@@ -40,7 +40,7 @@ const Coin = ({ perc, setPerc, token }) => {
             color="green"
             id="test-button-colored-green"
             onClick={function noRefCheck() {}}
-            text="Up"
+            text="Colored Green"
             theme="colored"
             type="button"
           />
@@ -48,7 +48,7 @@ const Coin = ({ perc, setPerc, token }) => {
             color="red"
             id="test-button-colored-red"
             onClick={function noRefCheck() {}}
-            text="Down"
+            text="Colored Red"
             theme="colored"
             type="button"
           />

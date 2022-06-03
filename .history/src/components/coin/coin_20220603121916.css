@@ -51,8 +51,9 @@
 .votes {
     display: flex;
     flex-direction: row;
+    position: center;
     right: 30%;
     gap: 1rem;
     margin-top: 1rem;
-    margin-left: 3.3rem;
+
 }

@@ -1,19 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState } from "react";
 import "./coin.css";
-import { Button } from "web3uikit";
 
 const Coin = ({ perc, setPerc, token }) => {
+  
   const [color, setColor] = useState();
 
-  useEffect(() => {
+  useEffect (() => {
     if (perc > 50) {
       setColor("#ccf500");
-    } else if (perc < 50) {
+    }
+    else if (perc < 50) {
       setColor("#ff0a0a");
-    } else {
+    }
+    else {
       setColor("#ff9933");
     }
-  }, [perc]);
+
+  }, [perc])
 
   return (
     <>
@@ -33,25 +36,7 @@ const Coin = ({ perc, setPerc, token }) => {
               backgroundColor: color,
             }}
           ></div>
-          <div className="percentage">{perc}%</div>
-        </div>
-        <div className="votes">
-          <Button
-            color="green"
-            id="test-button-colored-green"
-            onClick={function noRefCheck() {}}
-            text="Up"
-            theme="colored"
-            type="button"
-          />
-          <Button
-            color="red"
-            id="test-button-colored-red"
-            onClick={function noRefCheck() {}}
-            text="Down"
-            theme="colored"
-            type="button"
-          />
+          <div className="percentage">{perc}</div>
         </div>
       </div>
     </>

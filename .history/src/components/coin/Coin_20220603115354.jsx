@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./coin.css";
-import { Button } from "web3uikit";
 
 const Coin = ({ perc, setPerc, token }) => {
   const [color, setColor] = useState();
@@ -35,24 +34,7 @@ const Coin = ({ perc, setPerc, token }) => {
           ></div>
           <div className="percentage">{perc}%</div>
         </div>
-        <div className="votes">
-          <Button
-            color="green"
-            id="test-button-colored-green"
-            onClick={function noRefCheck() {}}
-            text="Up"
-            theme="colored"
-            type="button"
-          />
-          <Button
-            color="red"
-            id="test-button-colored-red"
-            onClick={function noRefCheck() {}}
-            text="Down"
-            theme="colored"
-            type="button"
-          />
-        </div>
+        <div className="votes">button</div>
       </div>
     </>
   );
