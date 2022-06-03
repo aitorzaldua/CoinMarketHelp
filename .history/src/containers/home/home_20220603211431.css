@@ -24,8 +24,7 @@
         align-items: flex-start;
         flex-direction: column;
         margin-right: 13rem;
-        margin-left: 3rem;
-        ;
+        margin-left: 3rem;;
 }
 
 .home__content-rigth h1 {
@@ -53,29 +52,8 @@
 .home__content-left {
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         flex-direction: column;
         margin-right: 13rem;
-        margin-left: 3rem;
-        padding: 1.5rem;
-
-        border-radius: 5%;
-
-        background-color: hsla(231, 81%, 6%, 1);
-        background-image:
-                radial-gradient(at 40% 20%, hsla(234, 96%, 24%, 1) 0px, transparent 50%),
-                radial-gradient(at 80% 0%, hsla(259, 97%, 56%, 1) 0px, transparent 50%),
-                radial-gradient(at 0% 50%, hsla(280, 100%, 71%, 1) 0px, transparent 50%);
-}
-
-
-.home__content-left h3 {
-        font-family: var(--font-family);
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 28px;
-        color: var(--color-01);
-        margin-top: 0.5rem;
-
-
+        margin-left: 3rem;;
 }

@@ -57,7 +57,7 @@
         flex-direction: column;
         margin-right: 13rem;
         margin-left: 3rem;
-        padding: 1.5rem;
+        padding: 2rem;
 
         border-radius: 5%;
 
@@ -74,7 +74,7 @@
         font-weight: 400;
         font-size: 20px;
         line-height: 28px;
-        color: var(--color-01);
+        color: var(--color-04);
         margin-top: 0.5rem;
 
 
