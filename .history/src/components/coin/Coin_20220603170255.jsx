@@ -39,9 +39,7 @@ const Coin = ({ perc, setPerc, token }) => {
           <Button
             color="green"
             id="test-button-colored-green"
-            onClick={() => {
-              setPerc(perc + 1);
-            }}
+            onClick={() => {setPerc(perc + 1)}}
             text="Up"
             theme="colored"
             type="button"
@@ -49,23 +47,38 @@ const Coin = ({ perc, setPerc, token }) => {
           <Button
             color="red"
             id="test-button-colored-red"
-            onClick={function noRefCheck() {
-              setPerc(perc - 1);
-            }}
+            onClick={function noRefCheck() {setPerc(perc - 1)}}
             text="Down"
             theme="colored"
             type="button"
           />
         </div>
-        <div className="info">
-          <Button
-            id="info"
-            onClick={() => {}}
-            text="INFO"
-            theme="traslucent"
-            type="button"
-          />
-        </div>
+        <div
+  style={{
+    height: '90vh',
+    transform: 'scale(1)'
+  }}
+>
+  <div>
+    <Modal
+      okText="Send E-Mail"
+      onCancel={function noRefCheck(){}}
+      onCloseButtonPressed={function noRefCheck(){}}
+      onOk={function noRefCheck(){}}
+      title="Recover Password"
+    >
+      <p
+        style={{
+          fontWeight: 600,
+          marginRight: '1em',
+          textAlign: 'center'
+        }}
+      >
+        Send instruction to reset password
+      </p>
+    </Modal>
+  </div>
+</div>
       </div>
     </>
   );

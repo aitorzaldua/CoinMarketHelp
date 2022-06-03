@@ -21,10 +21,9 @@
 
 /* MORALIS */
 
-/* coin.jsx/button id="info" */
-.sc-ksZaOG.NSiPS {
-    background-color: black !important;
-    border-color: black !important;
-    color: white !important;
+/* coin.jsx/button=info */
+.sc-ksZaOG {
+    background-color: black;
+
 }
 

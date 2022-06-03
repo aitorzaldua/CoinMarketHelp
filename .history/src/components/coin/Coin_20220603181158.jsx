@@ -39,9 +39,7 @@ const Coin = ({ perc, setPerc, token }) => {
           <Button
             color="green"
             id="test-button-colored-green"
-            onClick={() => {
-              setPerc(perc + 1);
-            }}
+            onClick={() => {setPerc(perc + 1)}}
             text="Up"
             theme="colored"
             type="button"
@@ -49,23 +47,19 @@ const Coin = ({ perc, setPerc, token }) => {
           <Button
             color="red"
             id="test-button-colored-red"
-            onClick={function noRefCheck() {
-              setPerc(perc - 1);
-            }}
+            onClick={function noRefCheck() {setPerc(perc - 1)}}
             text="Down"
             theme="colored"
             type="button"
           />
         </div>
-        <div className="info">
-          <Button
-            id="info"
-            onClick={() => {}}
-            text="INFO"
+        <Button
+            color="#ccf500"
+            onClick={function noRefCheck() {setPerc(perc - 1)}}
+            text="Info"
             theme="traslucent"
             type="button"
           />
-        </div>
       </div>
     </>
   );

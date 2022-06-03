@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./coin.css";
-import { Button, Modal } from "web3uikit";
+import { Button } from "web3uikit";
 
 const Coin = ({ perc, setPerc, token }) => {
   const [color, setColor] = useState();
@@ -39,9 +39,7 @@ const Coin = ({ perc, setPerc, token }) => {
           <Button
             color="green"
             id="test-button-colored-green"
-            onClick={() => {
-              setPerc(perc + 1);
-            }}
+            onClick={() => {setPerc(perc + 1)}}
             text="Up"
             theme="colored"
             type="button"
@@ -49,20 +47,9 @@ const Coin = ({ perc, setPerc, token }) => {
           <Button
             color="red"
             id="test-button-colored-red"
-            onClick={function noRefCheck() {
-              setPerc(perc - 1);
-            }}
+            onClick={function noRefCheck() {setPerc(perc - 1)}}
             text="Down"
             theme="colored"
-            type="button"
-          />
-        </div>
-        <div className="info">
-          <Button
-            id="info"
-            onClick={() => {}}
-            text="INFO"
-            theme="traslucent"
             type="button"
           />
         </div>

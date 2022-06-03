@@ -61,7 +61,7 @@ const Coin = ({ perc, setPerc, token }) => {
           <Button
             id="info"
             onClick={() => {}}
-            text="INFO"
+            text="Info"
             theme="traslucent"
             type="button"
           />

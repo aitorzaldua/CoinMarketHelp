@@ -42,7 +42,7 @@ const Coin = ({ perc, setPerc, token }) => {
             onClick={() => {
               setPerc(perc + 1);
             }}
-            text="Up"
+            text="  Up  "
             theme="colored"
             type="button"
           />
@@ -61,7 +61,7 @@ const Coin = ({ perc, setPerc, token }) => {
           <Button
             id="info"
             onClick={() => {}}
-            text="INFO"
+            text="Info"
             theme="traslucent"
             type="button"
           />
