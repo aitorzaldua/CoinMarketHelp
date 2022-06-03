@@ -7,7 +7,7 @@ const Coin = ({ perc, setPerc, token }) => {
 
   useEffect(() => {
     if (perc > 50) {
-      setColor("#61bda3");
+      setColor("#99d98c");
     } else if (perc < 50) {
       setColor("#ff0a0a");
     } else {
