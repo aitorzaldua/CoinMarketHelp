@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./coin.css";
 import { Button, Modal } from "web3uikit";
-import { abouts } from "../../about";
-import { useMoralisWeb3Api } from "react-moralis";
+import { abouts } from "../../../about";
 
 const Coin = ({ perc, setPerc, token }) => {
   const [color, setColor] = useState();

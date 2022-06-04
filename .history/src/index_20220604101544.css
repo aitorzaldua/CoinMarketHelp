@@ -30,7 +30,6 @@
 
 /* coin.jsx/modal */
 .sc-kTvvXX {
-    background-color: var(--color-02) !important;
-    width: 40% !important;
-    height: 70% !important;
+    background-color: black !important;
+    width: 70%;
 }

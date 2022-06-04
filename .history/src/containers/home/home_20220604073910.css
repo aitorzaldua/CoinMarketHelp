@@ -55,24 +55,16 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        margin: 3rem 13rem 0 3rem;
-        
+        margin-right: 13rem;
+        margin-left: 3rem;
         padding: 1.5rem;
 
         border-radius: 5%;
-        box-shadow: 5px 10px 10px;
 
+        background: radial-gradient(circle, var(--color-03), transparent);
 
-        background-color: hsla(177, 50%, 92%, 1);
-        background-image:
-                radial-gradient(at 40% 20%, hsla(177, 51%, 91%, 1) 0px, transparent 50%),
-                radial-gradient(at 80% 0%, hsla(211, 100%, 88%, 1) 0px, transparent 50%),
-                radial-gradient(at 0% 50%, hsla(102, 100%, 88%, 1) 0px, transparent 50%);
-
+        
 }
-
-
-
 
 
 .home__content-left h3 {
@@ -82,8 +74,6 @@
         line-height: 28px;
         color: var(--color-01);
         margin-top: 0.5rem;
-
-        text-shadow: 1px 1px 2px black, 0 0 25px var(--color-03), 0 0 5px var(--color-04);
 
 
 }

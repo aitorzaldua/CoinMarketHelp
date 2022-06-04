@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./coin.css";
 import { Button, Modal } from "web3uikit";
-import { abouts } from "../../about";
-import { useMoralisWeb3Api } from "react-moralis";
+import { abouts } from "../../../about";
 
 const Coin = ({ perc, setPerc, token }) => {
   const [color, setColor] = useState();
@@ -75,20 +74,12 @@ const Coin = ({ perc, setPerc, token }) => {
           />
         </div>
       </div>
-      <Modal
-        isVisible={visible}
-        onCloseButtonPressed={() => setVisible(false)}
-        hasFooter={false}
-        title={modalToken}
-      >
-        <div>
-          <span style={{ color: "var(--color-01)" }}>{`About`}</span>
-        </div>
-        <div>
-          {modalToken &&
-          abouts[abouts.findIndex((x) => x.token === modalToken)].about}
-        </div>
-      </Modal>
+        <Modal
+          isVisible={visible}
+          onCloseButtonPressed={() => setVisible(false)}
+          hasFooter={false}
+          title={modalToken}
+        ></Modal>
     </>
   );
 };

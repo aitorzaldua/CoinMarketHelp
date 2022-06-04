@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
 import "./bubbles.css";
 import Coin from "../../components/coin/Coin";
+import { Modal } from "web3uikit";
 
 const Bubbles = () => {
   const [btc, setBtc] = useState(50);
   const [eth, setEth] = useState(50);
-  const [link, setLink] = useState(50);
+  const [bnb, setBnb] = useState(50);
 
-  
+  const [visible, setVisible] = useState(false);
+  const [modalToken, setModalToken] = useState();
   
 
 
@@ -20,11 +22,18 @@ const Bubbles = () => {
         <div className="list">
         <Coin perc={btc} setPerc={setBtc} token={"BTC"} />
         <Coin perc={eth} setPerc={setEth} token={"ETH"} />
-        <Coin perc={link} setPerc={setLink} token={"LINK"} />
+        <Coin perc={bnb} setPerc={setBnb} token={"BNB"} />
         </div>
       </div>
 
-    
+      <Modal
+      isVisible={visible}
+      onCloseButtonPressed={() => setVisible(false)}
+      hasFooter={false}
+      title={modalToken}
+      >
+
+      </Modal>
     </>
   );
 };

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./bubbles.css";
 import Coin from "../../components/coin/Coin";
+import { Modal } from "web3uikit";
 
 const Bubbles = () => {
   const [btc, setBtc] = useState(50);

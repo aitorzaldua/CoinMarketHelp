@@ -26,7 +26,7 @@ const Home = () => {
           <div className="home__content-left">
             <h3>Is Moralis the best crypto enviroment for Developers?</h3>
             <h3>Vote and win 0.1 Matic</h3>
-            <Coin perc={moralis} setPerc={SetMoralis} token={"MORALIS"} />
+            <Coin perc={moralis} setPerc={SetMoralis} token={"Moralis"} />
           </div>
         </div>
       </div>
