@@ -28,9 +28,3 @@
     color: white !important;
 }
 
-/* coin.jsx/modal */
-.sc-eKszNL {
-    background-color: var(--color-02) !important;
-    width: 40% !important;
-    height: 70% !important;
-}
