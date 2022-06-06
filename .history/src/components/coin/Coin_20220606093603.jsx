@@ -26,13 +26,8 @@ const Coin = ({ perc, setPerc, token }) => {
   useEffect (() => {
     async function fetchTokenPrice() {
 
-      const options = {
-        address:
-          abouts[abouts.findIndex((x) => x.token === modalToken)].address,
-      };
+      setModalPrice(150);
 
-      const price = await Web3Api.token.getTokenPrice(options);
-      setModalPrice(price.usdPrice.toFixed(2));
     }
 
     if(modalToken) {

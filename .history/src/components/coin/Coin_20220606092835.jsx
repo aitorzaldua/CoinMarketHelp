@@ -11,7 +11,6 @@ const Coin = ({ perc, setPerc, token }) => {
   const [modalToken, setModalToken] = useState();
 
   const [modalPrice, setModalPrice] = useState(100);
-  const Web3Api = useMoralisWeb3Api();
 
   useEffect(() => {
     if (perc > 50) {
@@ -22,24 +21,6 @@ const Coin = ({ perc, setPerc, token }) => {
       setColor("#ff9933");
     }
   }, [perc]);
-
-  useEffect (() => {
-    async function fetchTokenPrice() {
-
-      const options = {
-        address:
-          abouts[abouts.findIndex((x) => x.token === modalToken)].address,
-      };
-
-      const price = await Web3Api.token.getTokenPrice(options);
-      setModalPrice(price.usdPrice.toFixed(2));
-    }
-
-    if(modalToken) {
-      fetchTokenPrice();
-    }
-
-  }, [modalToken]);
 
   return (
     <>
@@ -102,10 +83,6 @@ const Coin = ({ perc, setPerc, token }) => {
         hasFooter={false}
         title={modalToken}
       >
-        <div>
-          <span style={{ color: "white"}}>{`Price :`}</span>
-          {modalPrice}$
-        </div>
         <div>
           <span style={{ color: "var(--color-01)" }}>{`About`}</span>
         </div>

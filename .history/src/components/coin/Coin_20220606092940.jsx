@@ -23,24 +23,6 @@ const Coin = ({ perc, setPerc, token }) => {
     }
   }, [perc]);
 
-  useEffect (() => {
-    async function fetchTokenPrice() {
-
-      const options = {
-        address:
-          abouts[abouts.findIndex((x) => x.token === modalToken)].address,
-      };
-
-      const price = await Web3Api.token.getTokenPrice(options);
-      setModalPrice(price.usdPrice.toFixed(2));
-    }
-
-    if(modalToken) {
-      fetchTokenPrice();
-    }
-
-  }, [modalToken]);
-
   return (
     <>
       <div>
@@ -102,10 +84,6 @@ const Coin = ({ perc, setPerc, token }) => {
         hasFooter={false}
         title={modalToken}
       >
-        <div>
-          <span style={{ color: "white"}}>{`Price :`}</span>
-          {modalPrice}$
-        </div>
         <div>
           <span style={{ color: "var(--color-01)" }}>{`About`}</span>
         </div>
