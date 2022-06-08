@@ -21,9 +21,7 @@ const Bubbles = () => {
           Where do you think these tokens are going? Up or Down?
         </div>
         <div className="list">
-        <Coin perc={btc} setPerc={setBtc} token={"BTC"} />
-        <Coin perc={eth} setPerc={setEth} token={"ETH"} />
-        <Coin perc={link} setPerc={setLink} token={"LINK"} />
+        
         <Coin perc={usdt} setPerc={setUsdt} token={"USDT"} />
         <Coin perc={matic} setPerc={setMatic} token={"MATIC"} />
         <Coin perc={cronos} setPerc={setCronos} token={"CRONOS"} />

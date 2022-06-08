@@ -27,15 +27,26 @@ export const abouts = [
     token: "MATIC",
     address: "0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0",
     about:
-      "Polygon is the first well-structured, easy-to-use platform for Ethereum scaling and infrastructure development. Its core component is Polygon SDK, a modular, flexible framework that supports building multiple types of applications.",
+      "Founded in 2017, Chainlink is a blockchain abstraction layer that enables universally connected smart contracts. Through a decentralized oracle network, Chainlink allows blockchains to securely interact with external data feeds, events and payment methods, providing the critical off-chain information needed by complex smart contracts to become the dominant form of digital agreement. The Chainlink Network is driven by a large open-source community of data providers, node operators, smart contract developers, researchers, security auditors and more. The company focuses on ensuring that decentralized participation is guaranteed for all node operators and users looking to contribute to the network.",
   },
   {
-    token: "CRONOS",
-    address: "0xa0b73e1ff0b80914ab6fe0444e65848c4c34450b",
+    token: "LINK",
+    address: "0x514910771AF9Ca656af840dff83E8264EcF986CA",
     about:
-      "Cronos (CRO) is the native cryptocurrency token of Cronos Chain — a decentralized, open-source blockchain developed by the Crypto.com payment, trading and financial services company.",
+      "Founded in 2017, Chainlink is a blockchain abstraction layer that enables universally connected smart contracts. Through a decentralized oracle network, Chainlink allows blockchains to securely interact with external data feeds, events and payment methods, providing the critical off-chain information needed by complex smart contracts to become the dominant form of digital agreement. The Chainlink Network is driven by a large open-source community of data providers, node operators, smart contract developers, researchers, security auditors and more. The company focuses on ensuring that decentralized participation is guaranteed for all node operators and users looking to contribute to the network.",
   },
-
+  {
+    token: "LINK",
+    address: "0x514910771AF9Ca656af840dff83E8264EcF986CA",
+    about:
+      "Founded in 2017, Chainlink is a blockchain abstraction layer that enables universally connected smart contracts. Through a decentralized oracle network, Chainlink allows blockchains to securely interact with external data feeds, events and payment methods, providing the critical off-chain information needed by complex smart contracts to become the dominant form of digital agreement. The Chainlink Network is driven by a large open-source community of data providers, node operators, smart contract developers, researchers, security auditors and more. The company focuses on ensuring that decentralized participation is guaranteed for all node operators and users looking to contribute to the network.",
+  },
+  {
+    token: "LINK",
+    address: "0x514910771AF9Ca656af840dff83E8264EcF986CA",
+    about:
+      "Founded in 2017, Chainlink is a blockchain abstraction layer that enables universally connected smart contracts. Through a decentralized oracle network, Chainlink allows blockchains to securely interact with external data feeds, events and payment methods, providing the critical off-chain information needed by complex smart contracts to become the dominant form of digital agreement. The Chainlink Network is driven by a large open-source community of data providers, node operators, smart contract developers, researchers, security auditors and more. The company focuses on ensuring that decentralized participation is guaranteed for all node operators and users looking to contribute to the network.",
+  },
 
 
   {

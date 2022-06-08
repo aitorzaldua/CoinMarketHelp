@@ -6,9 +6,6 @@ const Bubbles = () => {
   const [btc, setBtc] = useState(50);
   const [eth, setEth] = useState(50);
   const [link, setLink] = useState(50);
-  const [usdt, setUsdt] = useState(50);
-  const [matic, setMatic] = useState(50);
-  const [cronos, setCronos] = useState(50);
 
   
   
