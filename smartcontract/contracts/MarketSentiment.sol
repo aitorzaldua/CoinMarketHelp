@@ -40,7 +40,7 @@ contract MarketSentiment {
 
     function vote(string memory _ticker, bool _vote) public {
         require(Tickers[_ticker].exists, "Can not vote here");
-        require(Tickers[_ticker].Voters[msg.sender], "You have already voted here");
+        require(!Tickers[_ticker].Voters[msg.sender], "You have already voted here");
 
         ticker storage t = Tickers[_ticker];
         t.Voters[msg.sender] = true;
@@ -61,7 +61,5 @@ contract MarketSentiment {
 
         return(t.up, t.down);
     }
-
-
 
 }
