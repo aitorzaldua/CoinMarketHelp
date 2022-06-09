@@ -16,7 +16,7 @@ root.render(
       <MoralisProvider
       appId='Z6nLxgwmofPx7Or7bYK6vsINYuYWxNf0FQnDRjFn'
       serverUrl='https://3t2cfz3eqrvs.usemoralis.com:2053/server'
-    >
+    ></MoralisProvider>
       <NotificationProvider>
         <App />
       </NotificationProvider>
