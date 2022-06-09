@@ -4,9 +4,6 @@ import Coin from "../../components/coin/Coin";
 import { useMoralis } from "react-moralis";
 
 const Bubbles = () => {
-
-  
-
   const [btc, setBtc] = useState(50);
   const [eth, setEth] = useState(50);
   const [link, setLink] = useState(50);
@@ -26,29 +23,12 @@ const Bubbles = () => {
     query.descending("CreatedAt");
     const results = await query.first();
     let up = Number(results.attributes.up);
-    let down = Number(results.attributes.down);
-    let CreatedAt = String(results.attributes.CreatedAt);
-
-    console.log ("up = ", up, "down = ", down);
-    console.log ("date: ", CreatedAt);
-
+    let down = Number(results.attributes.down); 
 
     let ratio = Math.round(up/(up+down)*100);
     setPerc(ratio);
 
   }
-
-  useEffect(() => {
-    if(isInitialized){
-      getRatio("BTC", setBtc);
-      /* getRatio("ETH", setEth);
-      getRatio("LINK", setLink);
-      getRatio("USDT", setUsdt);
-      getRatio("MATIC", setMatic);
-      getRatio("CRONOS", setCronos); */
-    }
-
-  }, [isInitialized]);
 
 
   return (

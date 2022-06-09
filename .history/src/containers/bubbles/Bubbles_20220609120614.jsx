@@ -26,11 +26,9 @@ const Bubbles = () => {
     query.descending("CreatedAt");
     const results = await query.first();
     let up = Number(results.attributes.up);
-    let down = Number(results.attributes.down);
-    let CreatedAt = String(results.attributes.CreatedAt);
+    let down = Number(results.attributes.down); 
 
     console.log ("up = ", up, "down = ", down);
-    console.log ("date: ", CreatedAt);
 
 
     let ratio = Math.round(up/(up+down)*100);

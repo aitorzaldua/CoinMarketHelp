@@ -25,13 +25,12 @@ const Bubbles = () => {
     query.equalTo("ticker", tick);
     query.descending("CreatedAt");
     const results = await query.first();
+    console.log(results);
+  
     let up = Number(results.attributes.up);
-    let down = Number(results.attributes.down);
-    let CreatedAt = String(results.attributes.CreatedAt);
+    let down = Number(results.attributes.down); 
 
-    console.log ("up = ", up, "down = ", down);
-    console.log ("date: ", CreatedAt);
-
+    console.log ("el valor de up es:", up);
 
     let ratio = Math.round(up/(up+down)*100);
     setPerc(ratio);
@@ -41,11 +40,11 @@ const Bubbles = () => {
   useEffect(() => {
     if(isInitialized){
       getRatio("BTC", setBtc);
-      /* getRatio("ETH", setEth);
+      getRatio("ETH", setEth);
       getRatio("LINK", setLink);
       getRatio("USDT", setUsdt);
       getRatio("MATIC", setMatic);
-      getRatio("CRONOS", setCronos); */
+      getRatio("CRONOS", setCronos);
     }
 
   }, [isInitialized]);

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./coin.css";
 import { Button, Modal } from "web3uikit";
 import { abouts } from "../../about";
-import { useMoralisWeb3Api } from "react-moralis";
+import { useMoralisWeb3Api, useMoralis } from "react-moralis";
 
 const Coin = ({ perc, setPerc, token }) => {
   const [color, setColor] = useState();
@@ -12,6 +12,8 @@ const Coin = ({ perc, setPerc, token }) => {
 
   const [modalPrice, setModalPrice] = useState();
 
+  const {Moralis, isInitialized} = useMoralis();
+  Moralis.start();
   const Web3Api = useMoralisWeb3Api();
 
   useEffect(() => {

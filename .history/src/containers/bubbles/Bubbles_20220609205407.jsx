@@ -27,7 +27,7 @@ const Bubbles = () => {
     const results = await query.first();
     let up = Number(results.attributes.up);
     let down = Number(results.attributes.down);
-    let CreatedAt = String(results.attributes.CreatedAt);
+    let CreatedAt = results.attributes.CreatedAt;
 
     console.log ("up = ", up, "down = ", down);
     console.log ("date: ", CreatedAt);

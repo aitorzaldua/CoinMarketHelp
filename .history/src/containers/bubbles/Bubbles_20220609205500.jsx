@@ -23,7 +23,7 @@ const Bubbles = () => {
     const query = new Moralis.Query(Votes);
 
     query.equalTo("ticker", tick);
-    query.descending("CreatedAt");
+    query.ascending("CreatedAt");
     const results = await query.first();
     let up = Number(results.attributes.up);
     let down = Number(results.attributes.down);
