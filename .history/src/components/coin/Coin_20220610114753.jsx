@@ -96,11 +96,7 @@ const Coin = ({ perc, setPerc, token }) => {
             color="green"
             id="test-button-colored-green"
             onClick={() => {
-              if(isAuthenticated){
-                vote(true)
-              }else{
-                alert("Authenticate to Vote")
-              }
+              setPerc(perc + 1);
             }}
             text="Up"
             theme="colored"
@@ -110,11 +106,7 @@ const Coin = ({ perc, setPerc, token }) => {
             color="red"
             id="test-button-colored-red"
             onClick={function noRefCheck() {
-              if(isAuthenticated){
-                vote(false)
-              }else{
-                alert("Authenticate to Vote")
-              }
+              setPerc(perc - 1);
             }}
             text="Down"
             theme="colored"

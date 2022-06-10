@@ -3,7 +3,6 @@ import "./coin.css";
 import { Button, Modal } from "web3uikit";
 import { abouts } from "../../about";
 import { useMoralisWeb3Api } from "react-moralis";
-import { useWeb3ExecuteFunction, useMoralis } from "react-moralis";
 
 
 const Coin = ({ perc, setPerc, token }) => {
@@ -45,30 +44,19 @@ const Coin = ({ perc, setPerc, token }) => {
 
   }, [modalToken]);
 
-   async function vote(upDown) {
+  async function vote(upDown) {
 
     //Contract info:
     let options = {
-      contractAddress: "0x230800d0A139faD1D8e95D71040631B84275986A",
+      contractAddress: "",
       functionName: "vote",
       abi: [{"inputs":[{"internalType":"string","name":"_ticker","type":"string"},{"internalType":"bool","name":"_vote","type":"bool"}],"name":"vote","outputs":[],"stateMutability":"nonpayable","type":"function"}],
       params: {
         _ticker: token,
         _vote: upDown,
       },
-   };
-
-   await contractProcessor.fetch({
-    params: options,
-    onSuccess: () => {
-      console.log("vote succesful");
-    },
-    onError: (error) => {
-      alert(error.data.message)
-    }
-   });
-
-
+   }
+ 
   }
 
   return (
@@ -96,11 +84,7 @@ const Coin = ({ perc, setPerc, token }) => {
             color="green"
             id="test-button-colored-green"
             onClick={() => {
-              if(isAuthenticated){
-                vote(true)
-              }else{
-                alert("Authenticate to Vote")
-              }
+              setPerc(perc + 1);
             }}
             text="Up"
             theme="colored"
@@ -110,11 +94,7 @@ const Coin = ({ perc, setPerc, token }) => {
             color="red"
             id="test-button-colored-red"
             onClick={function noRefCheck() {
-              if(isAuthenticated){
-                vote(false)
-              }else{
-                alert("Authenticate to Vote")
-              }
+              setPerc(perc - 1);
             }}
             text="Down"
             theme="colored"

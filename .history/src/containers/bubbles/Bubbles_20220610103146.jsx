@@ -41,29 +41,29 @@ const Bubbles = () => {
       getRatio("USDT", setUsdt);
       getRatio("MATIC", setMatic); 
       getRatio("CRONOS", setCronos);
-
-      async function createLiveQuery(){
-        let query = new Moralis.Query('Votes');
-        let subscription = await query.subscribe();
-        subscription.on('update', (object) => {
-          if(object.attributes.ticker === "BTC"){
-            getRatio("BTC", setBtc);
-          }else if (object.attributes.ticker === "ETH"){
-            getRatio("ETH", setEth);
-          }else if (object.attributes.ticker === "LINK"){
-            getRatio("LINK", setLink);
-          }else if (object.attributes.ticker === "MATIC"){
-            getRatio("MATIC", setMatic);
-          }else if (object.attributes.ticker === "USDT"){
-            getRatio("USDT", setUsdt);
-          }else if (object.attributes.ticker === "CRONOS"){
-            getRatio("CRONOS", setCronos);
-          }
-        });
-      }
-
-      createLiveQuery() 
     }
+
+    /* async function createLiveQuery(){
+      let query = new Moralis.Query('Votes');
+      let subscription = await query.subscribe();
+      subscription.on('update', (object) => {
+        if(object.attributes.ticker === "BTC"){
+          getRatio("BTC", setBtc);
+        }else if (object.attributes.ticker === "ETH"){
+          getRatio("ETH", setEth);
+        }else if (object.attributes.ticker === "LINK"){
+          getRatio("LINK", setLink);
+        }else if (object.attributes.ticker === "MATIC"){
+          getRatio("MATIC", setMatic);
+        }else if (object.attributes.ticker === "USDT"){
+          getRatio("USDT", setUsdt);
+        }else if (object.attributes.ticker === "CRONOS"){
+          getRatio("CRONOS", setCronos);
+        }
+      });
+    }
+
+    createLiveQuery() */
 
   }, [isInitialized]);
 

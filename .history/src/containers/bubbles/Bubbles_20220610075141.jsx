@@ -27,6 +27,11 @@ const Bubbles = () => {
     const results = await query.first();
     let up = Number(results.attributes.up);
     let down = Number(results.attributes.down);
+    let id = results.attributes.block_hash;
+
+    console.log ("up = ", up, "down = ", down);
+    console.log ("id: ", id);
+
 
     let ratio = Math.round(up/(up+down)*100);
     setPerc(ratio);
@@ -36,33 +41,11 @@ const Bubbles = () => {
   useEffect(() => {
     if(isInitialized){
       getRatio("BTC", setBtc);
-      getRatio("ETH", setEth);
+      /* getRatio("ETH", setEth);
       getRatio("LINK", setLink);
       getRatio("USDT", setUsdt);
-      getRatio("MATIC", setMatic); 
-      getRatio("CRONOS", setCronos);
-
-      async function createLiveQuery(){
-        let query = new Moralis.Query('Votes');
-        let subscription = await query.subscribe();
-        subscription.on('update', (object) => {
-          if(object.attributes.ticker === "BTC"){
-            getRatio("BTC", setBtc);
-          }else if (object.attributes.ticker === "ETH"){
-            getRatio("ETH", setEth);
-          }else if (object.attributes.ticker === "LINK"){
-            getRatio("LINK", setLink);
-          }else if (object.attributes.ticker === "MATIC"){
-            getRatio("MATIC", setMatic);
-          }else if (object.attributes.ticker === "USDT"){
-            getRatio("USDT", setUsdt);
-          }else if (object.attributes.ticker === "CRONOS"){
-            getRatio("CRONOS", setCronos);
-          }
-        });
-      }
-
-      createLiveQuery() 
+      getRatio("MATIC", setMatic);
+      getRatio("CRONOS", setCronos); */
     }
 
   }, [isInitialized]);

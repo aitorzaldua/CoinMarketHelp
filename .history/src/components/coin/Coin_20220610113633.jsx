@@ -45,7 +45,7 @@ const Coin = ({ perc, setPerc, token }) => {
 
   }, [modalToken]);
 
-   async function vote(upDown) {
+  async function vote(upDown) {
 
     //Contract info:
     let options = {
@@ -56,19 +56,8 @@ const Coin = ({ perc, setPerc, token }) => {
         _ticker: token,
         _vote: upDown,
       },
-   };
-
-   await contractProcessor.fetch({
-    params: options,
-    onSuccess: () => {
-      console.log("vote succesful");
-    },
-    onError: (error) => {
-      alert(error.data.message)
-    }
-   });
-
-
+   }
+ 
   }
 
   return (
@@ -96,11 +85,7 @@ const Coin = ({ perc, setPerc, token }) => {
             color="green"
             id="test-button-colored-green"
             onClick={() => {
-              if(isAuthenticated){
-                vote(true)
-              }else{
-                alert("Authenticate to Vote")
-              }
+              setPerc(perc + 1);
             }}
             text="Up"
             theme="colored"
@@ -110,11 +95,7 @@ const Coin = ({ perc, setPerc, token }) => {
             color="red"
             id="test-button-colored-red"
             onClick={function noRefCheck() {
-              if(isAuthenticated){
-                vote(false)
-              }else{
-                alert("Authenticate to Vote")
-              }
+              setPerc(perc - 1);
             }}
             text="Down"
             theme="colored"
