@@ -1,6 +1,6 @@
 import React from "react";
 import "./navbar.css";
-import Logo from "../../assets/logo_name.png";
+import Logo from "../../assets/logoCMH.png";
 import { ConnectButton } from "web3uikit";
 
 const Navbar = () => {
@@ -12,7 +12,7 @@ const Navbar = () => {
         </div>
         <div className="navbar__links">
           <h3><a href="#Home">Home</a></h3>
-          <h3><a href="#Bubbles">Bubbles</a></h3>
+          <h3><a href="#Bubbles">Community</a></h3>
           <h3><a href="#Markets">Markets</a></h3>
           <h3><a href="#Draft">About me</a></h3>
         </div>

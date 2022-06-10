@@ -10,9 +10,12 @@ const Bubbles = () => {
   const [btc, setBtc] = useState(50);
   const [eth, setEth] = useState(50);
   const [link, setLink] = useState(50);
-  const [usdt, setUsdt] = useState(50);
+  const [uni, setUni] = useState(50);
   const [matic, setMatic] = useState(50);
   const [cronos, setCronos] = useState(50);
+  const [atom, setAtom] = useState(50);
+  const [axs, setAxs] = useState(50);
+  const [ftm, setFtm] = useState(50);
 
   const {Moralis, isInitialized} = useMoralis();
 
@@ -38,9 +41,12 @@ const Bubbles = () => {
       getRatio("BTC", setBtc);
       getRatio("ETH", setEth);
       getRatio("LINK", setLink);
-      getRatio("USDT", setUsdt);
+      getRatio("UNI", setUni);
       getRatio("MATIC", setMatic); 
       getRatio("CRONOS", setCronos);
+      getRatio("ATOM", setAtom);
+      getRatio("AXS", setAxs);
+      getRatio("FTM", setFtm);
 
       async function createLiveQuery(){
         let query = new Moralis.Query('Votes');
@@ -54,15 +60,22 @@ const Bubbles = () => {
             getRatio("LINK", setLink);
           }else if (object.attributes.ticker === "MATIC"){
             getRatio("MATIC", setMatic);
-          }else if (object.attributes.ticker === "USDT"){
-            getRatio("USDT", setUsdt);
+          }else if (object.attributes.ticker === "UNI"){
+            getRatio("UNI", setUni);
           }else if (object.attributes.ticker === "CRONOS"){
             getRatio("CRONOS", setCronos);
-          }
+          }else if (object.attributes.ticker === "ATOM"){
+            getRatio("ATOM", setAtom);
+          }else if (object.attributes.ticker === "AXS"){
+              getRatio("AXS", setAxs);
+          }else if (object.attributes.ticker === "FTM"){
+            getRatio("FTM", setFtm);
+        };
+          
         });
       }
 
-      createLiveQuery() 
+      createLiveQuery()
     }
 
   }, [isInitialized]);
@@ -78,9 +91,12 @@ const Bubbles = () => {
         <Coin perc={btc} setPerc={setBtc} token={"BTC"} />
         <Coin perc={eth} setPerc={setEth} token={"ETH"} />
         <Coin perc={link} setPerc={setLink} token={"LINK"} />
-        <Coin perc={usdt} setPerc={setUsdt} token={"USDT"} />
+        <Coin perc={uni} setPerc={setUni} token={"UNI"} />
         <Coin perc={matic} setPerc={setMatic} token={"MATIC"} />
         <Coin perc={cronos} setPerc={setCronos} token={"CRONOS"} />
+        <Coin perc={atom} setPerc={setAtom} token={"ATOM"} />
+        <Coin perc={axs} setPerc={setAxs} token={"AXS"} />
+        <Coin perc={ftm} setPerc={setFtm} token={"FTM"} />
         </div>
       </div>
 

@@ -18,10 +18,10 @@ export const abouts = [
       "Founded in 2017, Chainlink is a blockchain abstraction layer that enables universally connected smart contracts. Through a decentralized oracle network, Chainlink allows blockchains to securely interact with external data feeds, events and payment methods, providing the critical off-chain information needed by complex smart contracts to become the dominant form of digital agreement. The Chainlink Network is driven by a large open-source community of data providers, node operators, smart contract developers, researchers, security auditors and more. The company focuses on ensuring that decentralized participation is guaranteed for all node operators and users looking to contribute to the network.",
   },
   {
-    token: "USDT",
-    address: "0xdac17f958d2ee523a2206206994597c13d831ec7",
+    token: "UNI",
+    address: "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
     about:
-      "SDT is a stablecoin (stable-value cryptocurrency) that mirrors the price of the U.S. dollar, issued by a Hong Kong-based company Tether. The token’s peg to the USD is achieved via maintaining a sum of commercial paper, fiduciary deposits, cash, reserve repo notes, and treasury bills in reserves that is equal in USD value to the number of USDT in circulation.",
+      "Uniswap is a popular decentralized trading protocol, known for its role in facilitating automated trading of decentralized finance (DeFi) tokens.",
   },
   {
     token: "MATIC",
@@ -35,9 +35,34 @@ export const abouts = [
     about:
       "Cronos (CRO) is the native cryptocurrency token of Cronos Chain — a decentralized, open-source blockchain developed by the Crypto.com payment, trading and financial services company.",
   },
+  {
+    token: "ATOM",
+    address: "0x8D983cb9388EaC77af0474fA441C4815500Cb7BB",
+    about:
+      "In a nutshell, Cosmos bills itself as a project that solves some of the “hardest problems” facing the blockchain industry. It aims to offer an antidote to “slow, expensive, unscalable and environmentally harmful” proof-of-work protocols, like those used by Bitcoin, by offering an ecosystem of connected blockchains.",
+  },
+  {
+    token: "AXS",
+    address: "0xbb0e17ef65f82ab018d8edd776e8dd940327b28b",
+    about:
+      "Axie Infinity is a blockchain-based trading and battling game that is partially owned and operated by its players.",
+  },
+  {
+    token: "FTM",
+    address: "0x4e15361fd6b4bb609fa63c81a2be19d873717870",
+    about:
+      "Fantom is a directed acyclic graph (DAG) smart contract platform providing decentralized finance (DeFi) services to developers using its own bespoke consensus algorithm.",
+  },
 
 
 
+
+
+
+
+
+
+  /* Featured: */
   {
     token: "MORALIS",
     address: "",

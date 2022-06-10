@@ -18,14 +18,15 @@
     gap: 4rem;
     padding: 0 0 2rem 18rem;
     font-family: var(--font-family);
+    font-weight:100;
 }
 
 .navbar__links a {
-    color: var(--color-04);
+    color: var(--color-silver);
 }
 
 .navbar__links a:hover {
-    background: var(--gradient-text);
+    background: #14f195;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

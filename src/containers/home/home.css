@@ -5,11 +5,11 @@
         width: 100vw;
         background-size: cover;
         /* e1f5f4, c2dfff, d4ffc2 */
-        background-color: hsla(177, 50%, 92%, 1);
+        background-color: hsla(240, 58%, 4%, 1);
         background-image:
-                radial-gradient(at 40% 20%, hsla(177, 51%, 91%, 1) 0px, transparent 50%),
-                radial-gradient(at 80% 0%, hsla(211, 100%, 88%, 1) 0px, transparent 50%),
-                radial-gradient(at 0% 50%, hsla(102, 100%, 88%, 1) 0px, transparent 50%);
+                radial-gradient(at 40% 20%, hsla(240, 71%, 20%, 1) 0px, transparent 50%),
+                radial-gradient(at 80% 0%, hsla(205, 37%, 40%, 1) 0px, transparent 50%);
+
 }
 
 .home__content {
@@ -30,7 +30,7 @@
 
 .home__content-rigth h1 {
         font-family: var(--font-family);
-        font-weight: 800;
+        font-weight: 600;
         font-size: 62px;
         line-height: 75px;
         letter-spacing: -0.04em;
@@ -56,18 +56,12 @@
         align-items: center;
         flex-direction: column;
         margin: 3rem 13rem 0 3rem;
-        
+
         padding: 1.5rem;
 
         border-radius: 5%;
-        box-shadow: 5px 10px 10px;
+        
 
-
-        background-color: hsla(177, 50%, 92%, 1);
-        background-image:
-                radial-gradient(at 40% 20%, hsla(177, 51%, 91%, 1) 0px, transparent 50%),
-                radial-gradient(at 80% 0%, hsla(211, 100%, 88%, 1) 0px, transparent 50%),
-                radial-gradient(at 0% 50%, hsla(102, 100%, 88%, 1) 0px, transparent 50%);
 
 }
 
@@ -80,10 +74,9 @@
         font-weight: 400;
         font-size: 20px;
         line-height: 28px;
-        color: var(--color-01);
+        color: var(--color-silver);
         margin-top: 0.5rem;
 
-        text-shadow: 1px 1px 2px black, 0 0 25px var(--color-03), 0 0 5px var(--color-04);
 
 
 }

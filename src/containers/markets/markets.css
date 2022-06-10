@@ -3,5 +3,8 @@
     height: 100vh;
     width: 100vw;
     background-size: cover;
-    background-color: #fed7ec;
+    background-color: hsla(240, 58%, 4%, 1);
+    background-image:
+        radial-gradient(at 80% 50%, hsla(205, 37%, 40%, 1) 0px, transparent 50%),
+        radial-gradient(at 0% 0%, hsla(143, 21%, 67%, 1) 0px, transparent 50%);
 }

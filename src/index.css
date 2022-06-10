@@ -1,15 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@200;400;500&display=swap');
+
 
 :root {
-    --font-family: 'Roboto', sans-serif;
+    font-family: 'Barlow Semi Condensed', sans-serif;
 
-    --gradient-text: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+    --gradient-text: linear-gradient(89.97deg, #9945ff 1.84%, #14f195 102.67%);
 
     --color-01: #e1f5f4;
     --color-02: #c2dfff;
     --color-03: #d4ffc2;
     --color-04: #2c8cb5;
     --color-05: #AE67FA;
+
+    --color-silver: #e5e5e5;
 
     --transition: all 400ms ease;
 

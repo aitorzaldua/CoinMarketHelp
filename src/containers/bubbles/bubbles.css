@@ -1,15 +1,14 @@
 .bubbles {
         position: relative;
         /* height: 100vh; */
-        height:fit-content;
+        height: fit-content;
         width: 100vw;
         background-size: cover;
 
-        background-color: hsla(231, 81%, 6%, 1);
+        background-color: hsla(240, 58%, 4%, 1);
         background-image:
-                radial-gradient(at 40% 20%, hsla(234, 96%, 24%, 1) 0px, transparent 50%),
-                radial-gradient(at 80% 0%, hsla(259, 97%, 56%, 1) 0px, transparent 50%),
-                radial-gradient(at 0% 50%, hsla(280, 100%, 71%, 1) 0px, transparent 50%);
+                radial-gradient(at 0% 50%, hsla(266, 80%, 87%, 1) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, hsla(143, 22%, 67%, 1) 0px, transparent 50%);
 }
 
 .bubbles__intructions {
@@ -40,4 +39,3 @@
         gap: 150px;
         row-gap: 50px;
 }
-
