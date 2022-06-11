@@ -16,6 +16,7 @@ const Bubbles = () => {
   const [atom, setAtom] = useState(50);
   const [axs, setAxs] = useState(50);
   const [ftm, setFtm] = useState(50);
+  const [featured, setFeatured] = useState(50);
 
   const {Moralis, isInitialized} = useMoralis();
 
@@ -47,6 +48,7 @@ const Bubbles = () => {
       getRatio("ATOM", setAtom);
       getRatio("AXS", setAxs);
       getRatio("FTM", setFtm);
+      getRatio("FEATURED", setFeatured);
 
       async function createLiveQuery(){
         let query = new Moralis.Query('Votes');
@@ -70,8 +72,10 @@ const Bubbles = () => {
               getRatio("AXS", setAxs);
           }else if (object.attributes.ticker === "FTM"){
             getRatio("FTM", setFtm);
+          }else if (object.attributes.ticker === "FEATURED"){
+            getRatio("FEATURED", setFeatured);
         };
-          
+
         });
       }
 

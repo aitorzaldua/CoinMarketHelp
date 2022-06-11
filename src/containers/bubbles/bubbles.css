@@ -6,9 +6,7 @@
         background-size: cover;
 
         background-color: hsla(240, 58%, 4%, 1);
-        background-image:
-                radial-gradient(at 0% 50%, hsla(266, 80%, 87%, 1) 0px, transparent 50%),
-                radial-gradient(at 0% 100%, hsla(143, 22%, 67%, 1) 0px, transparent 50%);
+        
 }
 
 .bubbles__intructions {

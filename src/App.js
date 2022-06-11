@@ -1,5 +1,5 @@
 import "./App.css";
-import { Home, Bubbles, Markets, Draftdigital } from "./containers";
+import { Home, Bubbles, Markets } from "./containers";
 import { Footer } from "./components";
 
 function App() {
@@ -8,7 +8,6 @@ function App() {
       <Home />
       <Bubbles />
       <Markets />
-      <Draftdigital />
       <Footer />
     </div>
   );
