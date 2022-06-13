@@ -12,7 +12,7 @@ const Home = () => {
 
   async function getRatio(tick, setPerc) {
 
-    const Votes = Moralis.Object.extend("Votes");
+    const Votes = Moralis.Object.extend("Votesfivef");
     const query = new Moralis.Query(Votes);
 
     query.equalTo("ticker", tick);

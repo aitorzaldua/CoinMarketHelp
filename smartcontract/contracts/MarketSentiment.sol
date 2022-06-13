@@ -5,11 +5,10 @@ pragma solidity ^0.8.7;
 import "hardhat/console.sol";
 
 contract MarketSentiment {
-
     address public owner;
     string[] public ticketsArray;
 
-    constructor() {
+    constructor() payable {
         owner = msg.sender;
     }
 
@@ -20,13 +19,7 @@ contract MarketSentiment {
         mapping(address => bool) Voters;
     }
 
-    event tickerupdated (
-        uint256 up,
-        uint256 down,
-        address voter,
-        string ticker
-
-    );
+    event tickerupdated(uint256 up, uint256 down, address voter, string ticker);
 
     mapping(string => ticker) private Tickers;
 
@@ -40,12 +33,15 @@ contract MarketSentiment {
 
     function vote(string memory _ticker, bool _vote) public {
         require(Tickers[_ticker].exists, "Can not vote here");
-        require(!Tickers[_ticker].Voters[msg.sender], "You have already voted here");
+        require(
+            !Tickers[_ticker].Voters[msg.sender],
+            "You have already voted here"
+        );
 
         ticker storage t = Tickers[_ticker];
         t.Voters[msg.sender] = true;
 
-        if(_vote) {
+        if (_vote) {
             t.up++;
         } else {
             t.down++;
@@ -53,13 +49,29 @@ contract MarketSentiment {
 
         emit tickerupdated(t.up, t.down, msg.sender, _ticker);
 
+        if (
+            keccak256(abi.encodePacked("FEATURED")) ==
+            keccak256(abi.encodePacked(_ticker))
+        ) {
+            uint256 prizeAmount = 0.1 ether;
+            require(
+                prizeAmount <= address(this).balance,
+                "Sorry, the wallet is empty"
+            );
+
+            (bool success, ) = (msg.sender).call{value: prizeAmount}("");
+            require(success, "Failed to withdraw money from contract.");
+        }
     }
 
-    function getVotes(string memory _ticker) public view returns (uint256 up, uint256 down) {
+    function getVotes(string memory _ticker)
+        public
+        view
+        returns (uint256 up, uint256 down)
+    {
         require(Tickers[_ticker].exists, "Object does not exists");
         ticker storage t = Tickers[_ticker];
 
-        return(t.up, t.down);
+        return (t.up, t.down);
     }
-
 }

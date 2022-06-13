@@ -5,7 +5,6 @@ import { abouts } from "../../about";
 import { useMoralisWeb3Api } from "react-moralis";
 import { useWeb3ExecuteFunction, useMoralis } from "react-moralis";
 
-
 const Coin = ({ perc, setPerc, token }) => {
   const [color, setColor] = useState();
 
@@ -15,7 +14,7 @@ const Coin = ({ perc, setPerc, token }) => {
 
   const Web3Api = useMoralisWeb3Api();
   const contractProcessor = useWeb3ExecuteFunction();
-  const {isAuthenticated} = useMoralis();
+  const { isAuthenticated } = useMoralis();
 
   useEffect(() => {
     if (perc > 50) {
@@ -27,9 +26,8 @@ const Coin = ({ perc, setPerc, token }) => {
     }
   }, [perc]);
 
-  useEffect (() => {
+  useEffect(() => {
     async function fetchTokenPrice() {
-
       const options = {
         address:
           abouts[abouts.findIndex((x) => x.token === modalToken)].address,
@@ -39,36 +37,43 @@ const Coin = ({ perc, setPerc, token }) => {
       setModalPrice(price.usdPrice.toFixed(2));
     }
 
-    if(modalToken) {
+    if (modalToken) {
       fetchTokenPrice();
     }
-
   }, [modalToken]);
 
-   async function vote(upDown) {
-
+  async function vote(upDown) {
     //Contract info:
     let options = {
-      contractAddress: "0x230800d0A139faD1D8e95D71040631B84275986A",
+      contractAddress: "0xFE3e75eb2ce7b9beb7a8F8F106BEb7088bca185F",
       functionName: "vote",
-      abi: [{"inputs":[{"internalType":"string","name":"_ticker","type":"string"},{"internalType":"bool","name":"_vote","type":"bool"}],"name":"vote","outputs":[],"stateMutability":"nonpayable","type":"function"}],
+      abi: [
+        {
+          inputs: [
+            { internalType: "string", name: "_ticker", type: "string" },
+            { internalType: "bool", name: "_vote", type: "bool" },
+          ],
+          name: "vote",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+      ],
       params: {
         _ticker: token,
         _vote: upDown,
       },
-   };
+    };
 
-   await contractProcessor.fetch({
-    params: options,
-    onSuccess: () => {
-      console.log("vote succesful");
-    },
-    onError: (error) => {
-      alert(error.data.message)
-    }
-   });
-
-
+    await contractProcessor.fetch({
+      params: options,
+      onSuccess: () => {
+        console.log("vote succesful");
+      },
+      onError: (error) => {
+        alert(error.data.message);
+      },
+    });
   }
 
   return (
@@ -96,10 +101,10 @@ const Coin = ({ perc, setPerc, token }) => {
             color="green"
             id="test-button-colored-green"
             onClick={() => {
-              if(isAuthenticated){
-                vote(true)
-              }else{
-                alert("Authenticate to Vote")
+              if (isAuthenticated) {
+                vote(true);
+              } else {
+                alert("Authenticate to Vote");
               }
             }}
             text="Up"
@@ -110,10 +115,10 @@ const Coin = ({ perc, setPerc, token }) => {
             color="red"
             id="test-button-colored-red"
             onClick={function noRefCheck() {
-              if(isAuthenticated){
-                vote(false)
-              }else{
-                alert("Authenticate to Vote")
+              if (isAuthenticated) {
+                vote(false);
+              } else {
+                alert("Authenticate to Vote");
               }
             }}
             text="Down"
@@ -141,7 +146,7 @@ const Coin = ({ perc, setPerc, token }) => {
         title={modalToken}
       >
         <div>
-          <span style={{ color: "white"}}>{`Price :`}</span>
+          <span style={{ color: "white" }}>{`Price :`}</span>
           {modalPrice}$
         </div>
         <div>
@@ -149,7 +154,7 @@ const Coin = ({ perc, setPerc, token }) => {
         </div>
         <div>
           {modalToken &&
-          abouts[abouts.findIndex((x) => x.token === modalToken)].about}
+            abouts[abouts.findIndex((x) => x.token === modalToken)].about}
         </div>
       </Modal>
     </>
