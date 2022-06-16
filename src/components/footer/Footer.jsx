@@ -16,7 +16,7 @@ const Footer = () => {
         <li><a href='#home'>Home</a></li>
         <li><a href='#Bubbles'>Community</a></li>
         <li><a href='#Markets'>Market</a></li>
-        <li><a href='https://meetmyportfolio.netlify.app/' target="_blank" rel="noreferrer">MyPortfolio</a></li>
+        <li><a href='https://aitorzaldua.netlify.app/' target="_blank" rel="noreferrer">MyPortfolio</a></li>
       </ul>
 
     <div className='footer__socials'>
