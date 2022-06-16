@@ -27,14 +27,16 @@
 
 /* coin.jsx/button id="info" */
 .sc-ksZaOG.NSiPS {
-    background-color: black !important;
-    border-color: black !important;
-    color: white !important;
+    background-color: var(--color-02) !important;
+    border-color: var(--color-04) !important;
+    color: var(--color-04) !important;
 }
 
 /* coin.jsx/modal */
-.sc-kTvvXX {
+.sc-jtcaXd {
     background-color: var(--color-02) !important;
+    border-color: var(--color-04) !important;
+    color: var(--color-04) !important;
     width: 40% !important;
     height: 70% !important;
 }

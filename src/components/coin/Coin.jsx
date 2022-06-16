@@ -146,15 +146,19 @@ const Coin = ({ perc, setPerc, token }) => {
         title={modalToken}
       >
         <div>
-          <span style={{ color: "white" }}>{`Price :`}</span>
+          <span style={{ color: "white" }}>{`Current Price:  `}</span>
           {modalPrice}$
         </div>
         <div>
-          <span style={{ color: "var(--color-01)" }}>{`About`}</span>
+          <span style={{ color: "var(--color-01)" }}>{`About The Network:`}</span>
         </div>
         <div>
           {modalToken &&
             abouts[abouts.findIndex((x) => x.token === modalToken)].about}
+        </div>
+        <div>
+        {modalToken &&
+            abouts[abouts.findIndex((x) => x.token === modalToken)].about2}
         </div>
       </Modal>
     </>

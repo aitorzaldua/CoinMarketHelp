@@ -16,13 +16,13 @@ const Footer = () => {
         <li><a href='#home'>Home</a></li>
         <li><a href='#Bubbles'>Community</a></li>
         <li><a href='#Markets'>Market</a></li>
-        <li><a href='https://meetmyportfolio.netlify.app/'>MyPortfolio</a></li>
+        <li><a href='https://meetmyportfolio.netlify.app/' target="_blank" rel="noreferrer">MyPortfolio</a></li>
       </ul>
 
     <div className='footer__socials'>
-      <a href='https://www.linkedin.com/in/aitor-zaldua/'><BsLinkedin/></a>
-      <a href='https://twitter.com'><IoLogoTwitter/></a>
-      <a href='https://github.com/aitorzaldua'><BsGithub/></a>
+      <a href='https://www.linkedin.com/in/aitor-zaldua/' target="_blank" rel="noreferrer"><BsLinkedin/></a>
+      <a href='https://twitter.com' target="_blank" rel="noreferrer"><IoLogoTwitter/></a>
+      <a href='https://github.com/aitorzaldua' target="_blank" rel="noreferrer"><BsGithub/></a>
     </div>
 
     <div className='footer__copyright'>

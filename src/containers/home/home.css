@@ -5,7 +5,7 @@
         width: 100vw;
         background-size: cover;
         /* e1f5f4, c2dfff, d4ffc2 */
-        background-color: hsla(240, 58%, 4%, 1);
+        background-color: rgb(7, 7, 24);
         background-image:
                 radial-gradient(at 40% 20%, hsla(240, 71%, 20%, 1) 0px, transparent 50%),
                 radial-gradient(at 80% 0%, hsla(205, 37%, 40%, 1) 0px, transparent 50%);
@@ -52,6 +52,31 @@
         color: var(--color-04);
         margin-top: 1.5rem;
 }
+
+.home__content-rigth-contract {
+        margin-top: 1.5rem;
+        justify-content: center;
+        background-color: #2a2a6a;
+        border-radius: 5em;
+        padding: 0.6rem 0 1rem 1rem;
+}
+
+.home__content-rigth-contract a {
+        font-family: var(--font-family) !important;
+        font-weight: 300;
+        font-size: 18px;
+        padding: 0 1rem 1rem 1rem;
+        color: var(--color-04);
+}
+
+.home__content-rigth-contract:hover {
+        background-color: #52528b;
+}
+
+.home__content-rigth-contract:hover > a {
+        color: #14f195;
+}
+
 
 .home__content-left {
         display: flex;

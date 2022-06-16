@@ -63,3 +63,8 @@
     margin-top: 1rem;
 }
 
+.modal__about {
+    display: flex;
+    flex-direction: column;
+}
+

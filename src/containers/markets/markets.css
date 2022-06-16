@@ -1,40 +1,74 @@
-.coin-app {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 64px;
-    color: #fff;
-  }
-  
-  .coin-search {
-    margin-bottom: 64px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-  }
-  
-  .coin-text {
-    margin-bottom: 32px;
-    text-align: center;
-  }
-  
-  .coin-input {
-    padding-left: 16px;
-    width: 300px;
-    height: 50px;
-    border-radius: 4px;
-    border: none;
-    background-image: linear-gradient(
-      -225deg,
-      #ac32e4 0%,
-      #7918f2 48%,
-      #4801ff 100%
-    );
-  
-    color: #e2e2e2;
-  }
-  
-  .coin-input::placeholder {
-    color: #e2e2e2;
-  }
+.markets {
+  position: relative;
+  /* height: 100vh; */
+  height: fit-content;
+  width: 100vw;
+  background-size: cover;
+  background-color: hsla(240, 58%, 4%, 1);
+}
+
+.coinSearch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 4rem;
+}
+
+.coinText {
+  margin-bottom: 32px;
+  text-align: center;
+  color: var(--color-04);
+}
+
+.formInput {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.coinInput {
+
+  width: 300px;
+  height: 50px;
+  border-radius: 5em;
+  padding-left: 1em;
+  border: none;
+  background: var(--gradient-text);
+
+  color: var(--color-silver);
+}
+
+.coinInput::placeholder {
+  color: var(--color-silver);
+}
+
+
+.titleRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  height: 50px;
+  border-bottom: 1px solid #d7d7d7;
+  width: 900px;
+}
+
+.coinSymbol {
+  width: 200px;
+}
+
+.coinPrice {
+  width: 160px;
+}
+
+.coinVolume {
+  width: 150px;
+}
+
+.coinPercent {
+  width: 200px;
+}
+
+.coinMarketcap {
+  width: 176px;
+}

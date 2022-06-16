@@ -67,6 +67,9 @@ const Home = () => {
               not alone. At CoinMarketHelp you can find out what other peers are
               feeling about the market and draw your own conclusions.
             </p>
+            <div className="home__content-rigth-contract">
+              <a href='https://mumbai.polygonscan.com/address/0x230800d0A139faD1D8e95D71040631B84275986A' target="_blank" rel="noreferrer">The voting system rules under 0xFE3e75eb2ce7b9beb7a8F8F106BEb7088bca185F contract.</a>
+            </div>
           </div>
           <div className="home__content-left">
             <h3>Vote and earn 0.1 Matic.</h3>

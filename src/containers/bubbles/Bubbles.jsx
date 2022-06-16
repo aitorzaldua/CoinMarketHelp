@@ -85,7 +85,8 @@ const Bubbles = () => {
     <>
       <div className="container bubbles" id="Bubbles">
         <div className="bubbles__intructions">
-          Where do you think these tokens are going? Up or Down?
+          <p>Where do you think these tokens are going?</p>
+          <p>Up or Down?</p>
         </div>
         <div className="list">
         <Coin perc={btc} setPerc={setBtc} token={"BTC"} />

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Coin from "./Coin";
+import "./markets.css";
 
 const Market = () => {
   const [coins, setCoins] = useState([]);
@@ -26,29 +27,43 @@ const Market = () => {
   );
 
   return (
-    <div className="coin-app" id="Markets">
-      <div className="coin-search">
-        <h1 className="coin-text">Search a currency</h1>
-        <form>
+    <div className="markets" id="Markets">
+      <div className="coinSearch">
+        <h1 className="coinText">Market Overview</h1>
+        <form className="formInput">
           <input
             type="text"
-            placeholder="Search"
-            className="coin-input"
+            placeholder="Search Coins"
+            className="coinInput"
             onChange={handleChange}
           ></input>
         </form>
+        <div className="coin-container">
+          <div className="titleRow">
+            <div className="coin-data">
+              <p className="coinName">Name</p>
+              <p className="coinSymbol">Symbol</p>
+              <p className="coinPrice">Price</p>
+              <p className="coinVolume">Volume</p>
+              <p className="coinPercent">Price Change %</p>
+              <p className="coinMarketcap">Mkt Cap</p>
+            </div>
+          </div>
+        </div>
       </div>
       {filteredCoins.map((coin) => {
-        return <Coin
-                    key={coin.id}
-                    name={coin.name}
-                    image={coin.image}
-                    symbol={coin.symbol}
-                    marketcap={coin.market_cap}
-                    price={coin.current_price}
-                    priceChange={coin.price_change_percentage_24h}
-                    volume={coin.total_volume}
-                />;
+        return (
+          <Coin
+            key={coin.id}
+            name={coin.name}
+            image={coin.image}
+            symbol={coin.symbol}
+            marketcap={coin.market_cap}
+            price={coin.current_price}
+            priceChange={coin.price_change_percentage_24h}
+            volume={coin.total_volume}
+          />
+        );
       })}
     </div>
   );
