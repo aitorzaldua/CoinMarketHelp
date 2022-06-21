@@ -17,7 +17,7 @@
         flex-direction: row;
         width: 90%;
         max-width: 1200px;
-        
+
 }
 
 .home__content-rigth {
@@ -73,7 +73,7 @@
         background-color: #52528b;
 }
 
-.home__content-rigth-contract:hover > a {
+.home__content-rigth-contract:hover>a {
         color: #14f195;
 }
 
@@ -112,7 +112,7 @@
 @media screen and (max-width: 2560px) {
         .home__content {
                 margin-left: 20em;
-                
+
 
         }
 }
@@ -128,9 +128,33 @@
 
 /* 3.- Tablet */
 @media screen and (max-width: 600px) {
+        .home {
+                height: fit-content;
+        }
         .home__content {
                 width: 80%;
                 margin-left: 2rem;
+                flex-direction: column;
+        }
+
+        .home__content h1 {
+                font-size: 24px;
+                line-height: 24px;
+        }
+
+        .home__content p {
+                font-size: 18px;
+                line-height: 16px;
+        }
+
+        .home__content-rigth-contract a {
+                font-size: 16px;
 
         }
+
+        .home__content-rigth {
+                margin: 0 !important;
+        }
+
+
 }
