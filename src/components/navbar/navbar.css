@@ -14,7 +14,8 @@
     height: auto;
 }
 
-.navbar__links {
+/* PC */
+.navbar__menu-container-pclinks {
     display: flex;
     flex-direction: row;
     gap: 4rem;
@@ -23,18 +24,76 @@
     font-weight:100;
 }
 
-.navbar__links a {
+.navbar__menu-container-pclinks a {
     color: var(--color-silver);
 }
 
-.navbar__links a:hover {
+.navbar__menu-container-pclinks a:hover {
     background: #14f195;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
+
+.navbar__pclogin {
+    padding-right: 4rem;
+    padding-bottom: 2.2rem;
+}
+
+/* end pc */
+
+/* Mobile and Tablets */
+
+.navbar__menu {
+    margin-left: 1rem;
+    display: none;
+    position: relative;
+}
+
+.navbar__menu-container-links {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 0 0 2rem 4rem;
+    font-family: var(--font-family);
+    font-weight:100;
+}
+
+.navbar__menu-container-links a {
+    color: var(--color-silver);
+}
+
+.navbar__menu-container-links a:hover {
+    background: #14f195;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
 .navbar__login {
     padding-right: 4rem;
     padding-bottom: 2.2rem;
+}
+
+/* End of Mobile and Tablets */
+
+
+@media screen and (max-width: 1050px) {
+
+    .navbar__brand img {
+        width: 120px;
+    }
+
+    .navbar__menu-container-pclinks {
+        display: none;
+    }
+
+    .navbar__pclogin {
+        display: none;
+    }
+    .navbar__menu {
+        display: flex;
+    }
 }

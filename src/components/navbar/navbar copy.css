@@ -1,0 +1,45 @@
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.navbar__brand img {
+    width: 190px;
+    height: auto;
+}
+
+.navbar__menu-container-links {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    padding: 0 0 2rem 4rem;
+    font-family: var(--font-family);
+    font-weight:100;
+}
+
+.navbar__menu-container-links a {
+    color: var(--color-silver);
+}
+
+.navbar__menu-container-links a:hover {
+    background: #14f195;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navbar__menu-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar__login {
+    padding-right: 4rem;
+    padding-bottom: 2.2rem;
+}
