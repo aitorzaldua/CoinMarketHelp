@@ -7,11 +7,9 @@ import { useMoralis } from "react-moralis";
 const Home = () => {
   const [featured, setFeatured] = useState(50);
 
-  const {Moralis, isInitialized} = useMoralis();
-
+  const { Moralis, isInitialized } = useMoralis();
 
   async function getRatio(tick, setPerc) {
-
     const Votes = Moralis.Object.extend("Votesfivef");
     const query = new Moralis.Query(Votes);
 
@@ -21,31 +19,28 @@ const Home = () => {
     let up = Number(results.attributes.up);
     let down = Number(results.attributes.down);
 
-    console.log (up, down);
+    console.log(up, down);
 
-    let ratio = Math.round(up/(up+down)*100);
+    let ratio = Math.round((up / (up + down)) * 100);
     setPerc(ratio);
-
   }
 
   useEffect(() => {
-    if(isInitialized){
+    if (isInitialized) {
       getRatio("FEATURED", setFeatured);
 
-      async function createLiveQuery(){
-        let query = new Moralis.Query('Votes');
+      async function createLiveQuery() {
+        let query = new Moralis.Query("Votes");
         let subscription = await query.subscribe();
-        subscription.on('update', (object) => {
-          if(object.attributes.ticker === "FEATURED"){
+        subscription.on("update", (object) => {
+          if (object.attributes.ticker === "FEATURED") {
             getRatio("FEATURED", setFeatured);
-        };
-
+          }
         });
       }
 
-      createLiveQuery()
+      createLiveQuery();
     }
-
   }, [isInitialized]);
 
   return (
@@ -67,12 +62,20 @@ const Home = () => {
               not alone. At CoinMarketHelp you can find out what other peers are
               feeling about the market and draw your own conclusions.
             </p>
+            <p>Connect your wallet to Mumbai Matic Blockchain</p>
             <div className="home__content-rigth-contract">
-              <a href='https://mumbai.polygonscan.com/address/0xfe3e75eb2ce7b9beb7a8f8f106beb7088bca185f' target="_blank" rel="noreferrer">The voting system rules under contract: 0xFE3e75eb2ce7b9beb7a8F8F106BEb7088bca185F</a>
+              <a
+                href="https://mumbai.polygonscan.com/address/0xfe3e75eb2ce7b9beb7a8f8f106beb7088bca185f"
+                target="_blank"
+                rel="noreferrer"
+              >
+                The voting system rules under contract:
+                0xFE3e75eb2ce7b9beb7a8F8F106BEb7088bca185F
+              </a>
             </div>
           </div>
           <div className="home__content-left">
-            <h3>Vote and earn 0.1 Matic.</h3>
+            <h3>Vote and earn 0.1 Mumbai Matic.</h3>
             <h3>Will Bitcoin fall below $15,000?</h3>
 
             <Coin perc={featured} setPerc={setFeatured} token={"FEATURED"} />
