@@ -73,7 +73,7 @@ const Home = () => {
           </div>
           <div className="home__content-left">
             <h3>Vote and earn 0.1 Matic.</h3>
-            <h3>Is Moralis the best crypto enviroment for Developers?</h3>
+            <h3>Will Bitcoin fall below $15,000?</h3>
 
             <Coin perc={featured} setPerc={setFeatured} token={"FEATURED"} />
           </div>

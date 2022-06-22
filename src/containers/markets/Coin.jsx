@@ -29,6 +29,15 @@ const Coin = ({
           )}
           <p className="coin-marketcap">${marketcap.toLocaleString()}</p>
         </div>
+
+        <div className="coinMobile">
+          <img src={image} alt="crypto" />
+          <h1>{name}</h1>
+        </div>
+        <div className="coin-dataMobile">
+          <p className="coin-price">Price: ${price}</p>
+        </div>
+
       </div>
     </div>
   );
